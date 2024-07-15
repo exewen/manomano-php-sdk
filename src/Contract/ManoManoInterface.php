@@ -12,6 +12,6 @@ interface ManoManoInterface
 
     public function getOrders(array $params, array $header = []);
 
-    public function setShipments(string $orderId, array $params, array $header = []);
+    public function setShipments(array $params, array $header = []);
 
 }

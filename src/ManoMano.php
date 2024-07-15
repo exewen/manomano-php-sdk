@@ -43,9 +43,9 @@ class ManoMano implements ManoManoInterface
     }
 
 
-    public function setShipments(string $orderId, array $params, array $header = [])
+    public function setShipments(array $params, array $header = [])
     {
-        return $this->shippingsService->setShipments($orderId, $params, $header);
+        return $this->shippingsService->setShipments($params, $header);
     }
 
 
