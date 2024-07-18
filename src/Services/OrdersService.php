@@ -10,6 +10,8 @@ class OrdersService
     private $httpClient;
     private $driver;
     private $ordersUrl = '/orders/v1/orders';
+    private $acceptOrdersUrl = '/orders/v1/accept-orders';
+    private $refuseOrdersUrl = '/orders/v1/refuse-orders';
 
     public function __construct(HttpClientInterface $httpClient, ConfigInterface $config)
     {
@@ -20,6 +22,18 @@ class OrdersService
     public function getOrders(array $params, array $header)
     {
         $result = $this->httpClient->get($this->driver, $this->ordersUrl, $params, $header);
+        return json_decode($result, true);
+    }
+
+    public function acceptOrders(array $params, array $header)
+    {
+        $result = $this->httpClient->get($this->driver, $this->acceptOrdersUrl, $params, $header);
+        return json_decode($result, true);
+    }
+
+    public function refuseOrders(array $params, array $header)
+    {
+        $result = $this->httpClient->get($this->driver, $this->refuseOrdersUrl, $params, $header);
         return json_decode($result, true);
     }
 

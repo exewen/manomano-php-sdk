@@ -14,4 +14,8 @@ interface ManoManoInterface
 
     public function setShipments(array $params, array $header = []);
 
+    public function acceptOrders(array $params, array $header = []);
+
+    public function refuseOrders(array $params, array $header = []);
+
 }

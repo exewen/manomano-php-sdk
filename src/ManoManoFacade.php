@@ -13,6 +13,8 @@ use Exewen\ManoMano\Contract\ManoManoInterface;
  * @method static void setThirdPartyName(string $thirdPartyName, string $channel = 'cdiscount_api')
  * @method static array getOrders(array $params, array $header = [])
  * @method static array setShipments(array $params, array $header = [])
+ * @method static array acceptOrders(array $params, array $header = [])
+ * @method static array refuseOrders(array $params, array $header = [])
  */
 class ManoManoFacade extends Facade
 {

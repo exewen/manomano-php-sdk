@@ -49,4 +49,13 @@ class ManoMano implements ManoManoInterface
     }
 
 
+    public function acceptOrders(array $params, array $header = [])
+    {
+        return $this->ordersService->acceptOrders($params, $header);
+    }
+
+    public function refuseOrders(array $params, array $header = [])
+    {
+        return $this->ordersService->refuseOrders($params, $header);
+    }
 }
