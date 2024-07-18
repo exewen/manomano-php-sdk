@@ -27,13 +27,13 @@ class OrdersService
 
     public function acceptOrders(array $params, array $header)
     {
-        $result = $this->httpClient->post($this->driver, $this->acceptOrdersUrl, $params, $header);
+        $result = $this->httpClient->post($this->driver, $this->acceptOrdersUrl, $params, $header, [], 'json');
         return json_decode($result, true);
     }
 
     public function refuseOrders(array $params, array $header)
     {
-        $result = $this->httpClient->post($this->driver, $this->refuseOrdersUrl, $params, $header);
+        $result = $this->httpClient->post($this->driver, $this->refuseOrdersUrl, $params, $header, [], 'json');
         return json_decode($result, true);
     }
 
