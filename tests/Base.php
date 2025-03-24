@@ -20,7 +20,7 @@ class Base extends TestCase
         !defined('BASE_PATH_PKG') && define('BASE_PATH_PKG', dirname(__DIR__, 1));
 
         ManoManoFacade::setApiKey(getenv('MANO_API_KEY'));
-        $this->sellerContractId = getenv('SELLER_CONTRACT_ID');
+        $this->sellerContractId = getenv('MANO_SELLER_CONTRACT_ID');
     }
 
 }
