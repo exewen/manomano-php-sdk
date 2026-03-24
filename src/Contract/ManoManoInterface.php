@@ -18,4 +18,9 @@ interface ManoManoInterface
 
     public function refuseOrders(array $params, array $header = []);
 
+    public function getOffersInfo(array $params, array $header = []);
+
+    public function createOrUpdateOffers(array $params, array $header = []);
+
+    public function updateOffers(string $offerId, array $params, array $header = []);
 }

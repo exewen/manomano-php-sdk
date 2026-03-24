@@ -15,6 +15,10 @@ use Exewen\ManoMano\Contract\ManoManoInterface;
  * @method static array setShipments(array $params, array $header = [])
  * @method static array acceptOrders(array $params, array $header = [])
  * @method static array refuseOrders(array $params, array $header = [])
+ * @method static array getOffers(array $params, array $header = [])
+ * @method static array getOffer(string $offerId, array $params = [], array $header = [])
+ * @method static array updateOffer(string $offerId, array $params, array $header = [])
+ * @method static array batchUpdateOffers(array $params, array $header = [])
  */
 class ManoManoFacade extends Facade
 {
